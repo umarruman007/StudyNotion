@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:"https://study-notion-frontend-ashen-eight.vercel.app",
+		origin:["https://study-notion-frontend-ashen-eight.vercel.app", "https://studynotion-backend-4xmm.onrender.com"],
 		credentials:true,
 	})
 )
@@ -56,4 +56,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
 	console.log(`App is running at ${port}`)
 })
-
