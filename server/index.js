@@ -24,13 +24,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: ["https://study-notion-frontend-ashen-eight.vercel.app"],
-		credentials: true,
-		methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-		allowedHeaders: ["Content-Type", "Authorization"],
+		origin:"https://study-notion-frontend-ashen-eight.vercel.app",
+		credentials:true,
 	})
 )
-
 
 app.use(
 	fileUpload({
@@ -59,3 +56,4 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
 	console.log(`App is running at ${port}`)
 })
+
